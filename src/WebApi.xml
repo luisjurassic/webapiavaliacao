@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.Api1Controller">
+            <summary>
+            Classe controladora da Api 1
+            </summary>
+        </member>
+        <member name="F:WebApi.Controllers.Api1Controller._logger">
+            <summary>
+            Variavel de leituro de logs.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.Api1Controller.TaxaJuros">
+            <summary>
+            O valor fixo da taxa de juros
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.Api1Controller.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.Api1Controller})">
+            <summary>
+            Construtor da classe controladora da Api 1
+            </summary> 
+            <param name="logger">Registro de logs da classe.</param>
+        </member>
+        <member name="M:WebApi.Controllers.Api1Controller.GetTaxaJuros">
+            <summary>
+            Retorna a taxa de juros.
+            </summary>
+            <returns>Valor da taxa de juros em decimal.</returns>
+        </member>
+        <member name="T:WebApi.Controllers.Api2Controller">
+            <summary>
+            Classe controladora da Api 2
+            </summary>
+        </member>
+        <member name="F:WebApi.Controllers.Api2Controller._logger">
+            <summary>
+            Variavel de leituro de logs.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.Api2Controller.Helper">
+            <summary>
+            Variavel da classe de ajuda.
+            </summary>
+        </member>
+        <member name="P:WebApi.Controllers.Api2Controller.LinkCode">
+            <summary>
+            O link do repositório git.
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.Api2Controller.#ctor(Microsoft.Extensions.Logging.ILogger{WebApi.Controllers.Api2Controller})">
+            <summary>
+            Construtor da classe controladora da Api 2
+            </summary>
+            <param name="logger">Registro de logs da classe.</param>
+        </member>
+        <member name="M:WebApi.Controllers.Api2Controller.GetCalculaJuros(System.Decimal,System.Int32)">
+            <summary>
+            Realiza o calculo de juros sobre o <paramref name="valorinicial"/>.
+            </summary>
+            <param name="valorinicial">O valor.</param>
+            <param name="meses">Quantidade de tempo em meses.</param>
+            <returns>O valor com juros relativo ao tempo em meses.</returns>
+        </member>
+        <member name="M:WebApi.Controllers.Api2Controller.GetShowMeCode">
+            <summary>
+            Retornar a url de onde encontra-se o código fonte do projeto.
+            </summary>
+            <returns>A url do repositório git.</returns>
+        </member>
+        <member name="T:WebApi.Helper">
+            <summary>
+            Classe de ajuda para requisições HTTP.
+            </summary>
+        </member>
+        <member name="P:WebApi.Helper.Client">
+            <summary>
+            Classe base para enviar e receber solicitações HTTP através de uma url.
+            </summary>
+        </member>
+        <member name="M:WebApi.Helper.#ctor">
+            <summary>
+            Contrutor da classe de ajuda.
+            </summary>       
+        </member>
+        <member name="M:WebApi.Helper.TaxaJuros(Microsoft.AspNetCore.Http.HttpRequest)">
+            <summary>
+            Chama a API 1 para realizar a consulta da taxa de juros.
+            </summary>
+            <param name="request">O objeto de solicitação HTTP.</param>
+            <returns>Retorna o valor da taxa de juros</returns>
+        </member>
+        <member name="T:WebApi.Models.Retorno`1">
+            <summary>
+            Classe modelo de retorno de dados.
+            </summary>
+            <typeparam name="T">O type do objeto de retorno.</typeparam>
+        </member>
+        <member name="P:WebApi.Models.Retorno`1.Erro">
+            <summary>
+            Flag que indica se ocorreu erro.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Retorno`1.Mensagem">
+            <summary>
+            Mensagem de erro caso ocorra alguma exceção.
+            </summary>
+        </member>
+        <member name="P:WebApi.Models.Retorno`1.Objeto">
+            <summary>
+            Objeto de resposta.
+            </summary>
+        </member>
+        <member name="T:WebApi.Startup">
+            <summary>
+            Classe de inicialização do aplicação
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Construtor da classe de inicialização
+            </summary>        
+            <param name="env">Informações do ambiente de hospedagem da aplicação</param>
+        </member>
+        <member name="P:WebApi.Startup.Configuration">
+            <summary>
+            Propriedades de configuração da aplicação.
+            </summary>
+        </member>
+        <member name="M:WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configura os serviços que iram rodar com a aplicação.
+            </summary>
+            <param name="services">A coleção de serviços.</param>
+        </member>
+        <member name="M:WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configura a aplicação.
+            </summary>
+            <param name="app">Classe que fornece as configurações da aplicação.</param>
+            <param name="env">Informações do ambiente de hospedagem da aplicação.</param>
+        </member>
+    </members>
+</doc>
