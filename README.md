@@ -7,7 +7,7 @@ Você deverá criar duas API's uma com dois endpoints e outra com um endpoint
 Responde pelo path relativo `/taxaJuros`, retorna o juros de `1%` ou `0,01` (fixo no código).
 ```sh 
 Exemplo: /taxaJuros 
-Resultado esperado: 0,01**
+Resultado esperado: 0,01
 ```
 
 #### API 2
